@@ -1,0 +1,38 @@
+\ProvidesPackage{j}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{cleveref}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{nicefrac}
+\usepackage{url}
+\usepackage{xcolor}
+
+% Setup BibLaTeX
+\usepackage[style=authoryear,
+            date=year,
+            natbib,
+            maxcitenames=2,
+            maxbibnames=10,
+            citestyle=authoryear,
+            uniquelist=false]{biblatex}
+\setlength\bibitemsep{1.5\itemsep}
+% No quotation marks around titles
+\DeclareFieldFormat[article, book, inbook, incollection, inproceedings, misc,
+                    thesis, unpublished, techreport, phdthesis]{title}{#1}
+% Sort alphabetically by surname-firstname
+\DeclareNameAlias{sortname}{family-given}
+% No colon after 'in'
+\renewcommand*{\intitlepunct}{\space}
+
+% Solarized dark mode
+\newcommand{\darkmode}{
+  \pagecolor[rgb]{0,0.168,0.211}  % Background
+  \color[rgb]{0.512,0.578,0.586}  % Text
+}
+
+\newcommand\given{\,\vert\,}  % Conditional probability. e.g. P(x\given y)
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}  % Absolute value. e.g. \abs{x - 1}
