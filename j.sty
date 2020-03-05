@@ -2,6 +2,7 @@
 
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage{mathtools}
@@ -36,3 +37,6 @@
 
 \newcommand\given{\,\vert\,}  % Conditional probability. e.g. P(x\given y)
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}  % Absolute value. e.g. \abs{x - 1}
+
+% Shorter display urls. Example usage: \jurl{github.com/j-towns/fastar}
+\newcommand\jurl[1]{\href{https://#1}{\nolinkurl{#1}}}
