@@ -38,6 +38,12 @@
 
 \newcommand\given{\,\vert\,}  % Conditional probability. e.g. P(x\given y)
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}  % Absolute value. e.g. \abs{x - 1}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+% KL div, e.g. \kl{P}{Q}
+\DeclarePairedDelimiterX{\divergence}[2]{(}{)}{#1\,\delimsize\|\,#2}
+\newcommand{\kl}{D_\mathrm{KL}\divergence}
 
 % Shorter display urls. Example usage: \jurl{github.com/j-towns/fastar}
 \newcommand\jurl[1]{\href{https://#1}{\nolinkurl{#1}}}
